@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- =====================================================
+         SEO — ces balises aident Google à comprendre ton site
+         ===================================================== -->
+    <title>Ulruch Marcial Ngomen | Ingénieur Systèmes Embarqués & IA — UQTR</title>
+    <meta name="description" content="Portfolio d'Ulruch Marcial Ngomen, étudiant B.ing. Génie Informatique à l'UQTR. Spécialiste systèmes embarqués, IA, Linux et C/VHDL. Disponible pour stages.">
+    <meta name="keywords" content="systèmes embarqués, IA, ingénieur informatique, UQTR, C, VHDL, Python, Linux, Trois-Rivières">
+    <meta name="author" content="Ulruch Marcial Ngomen">
+
+    <!-- Open Graph = aperçu quand tu partages le lien sur LinkedIn/WhatsApp -->
+    <meta property="og:title" content="Ulruch Marcial Ngomen — Ingénieur Systèmes Embarqués & IA">
+    <meta property="og:description" content="Portfolio d'un ingénieur à la croisée du matériel et de l'intelligence artificielle. B.ing. UQTR · 8 ans d'expérience · Disponible pour stages.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_CA">
+
+    <!-- Polices Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Texture de bruit décorative en arrière-plan -->
+    <div class="noise" aria-hidden="true"></div>
+    <!-- Cercle lumineux qui suit le curseur -->
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+    <!-- =====================================================
+         NAVIGATION
+         ===================================================== -->
+    <header>
+        <nav>
+            <div class="logo">
+                <span class="logo-bracket">&lt;</span>UMN<span class="logo-bracket">/&gt;</span>
+            </div>
+
+            <!-- Menu de navigation principal -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#formation">Formation</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#experience">Expérience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <!-- Bouton thème clair/sombre -->
+                <button id="theme-toggle" aria-label="Changer le thème">
+                    <span class="toggle-icon">☀️</span>
+                    <span class="toggle-text">Mode Clair</span>
+                </button>
+
+                <!-- Bouton hamburger — visible seulement sur mobile -->
+                <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+                    <!-- Les 3 barres du menu hamburger -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- =====================================================
+             HERO — Section principale d'accueil
+             ===================================================== -->
+        <section id="hero">
+            <div class="hero-content">
+                <!-- Badge de statut avec point vert animé -->
+                <div class="hero-tag">
+                    <span class="dot-pulse"></span> B.ing. Génie Informatique · UQTR · Trois-Rivières
+                </div>
+
+                <h1>
+                    <span class="line-1">Ulruch Marcial</span>
+                    <span class="line-2 gradient-text">Ngomen</span>
+                </h1>
+
+                <!-- Texte animé qui change (typing effect) -->
+                <p class="hero-role" id="heroRole">Systèmes Embarqués <span class="sep">//</span> IA <span class="sep">//</span> Réseaux</p>
+
+                <p class="hero-sub">
+                    Du registre matériel à l'intelligence artificielle, des protocoles réseau aux télécommunications — je conçois des systèmes fiables, performants et connectés. Double expertise en informatique et électronique, forgée sur deux continents.
+                </p>
+
+                <!-- Boutons d'action -->
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+                    <!-- ⚠️ Remplace le # par le vrai lien vers ton CV PDF -->
+                    <a href="#" class="btn btn-cv" id="cvBtn" download aria-label="Télécharger mon CV">
+                        ⬇ Télécharger CV
+                    </a>
+                    <a href="https://github.com/ulruchmarcial" target="_blank" rel="noopener" class="btn btn-ghost">
+                        <span aria-hidden="true">🐙</span> GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/ulruch-marcial-ngomen-a6b33931a/" target="_blank" rel="noopener" class="btn btn-ghost">
+                        <span aria-hidden="true">💼</span> LinkedIn
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bloc de code décoratif à droite -->
+            <div class="hero-visual">
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="wdot red" aria-hidden="true"></span>
+                        <span class="wdot yellow" aria-hidden="true"></span>
+                        <span class="wdot green" aria-hidden="true"></span>
+                        <span class="file-name">profil.c</span>
+                    </div>
+                    <pre class="code-content" aria-label="Code C de présentation"><span class="c-comment">/* Ulruch Marcial Ngomen — 2025 */</span>
+<span class="c-keyword">#include</span> <span class="c-str">&lt;uqtr.h&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-str">&lt;embedded_systems.h&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-str">&lt;machine_learning.h&gt;</span>
+
+<span class="c-type">typedef struct</span> {
+    <span class="c-type">char</span>  *nom     = <span class="c-str">"Ulruch Marcial Ngomen"</span>;
+    <span class="c-type">char</span>  *statut  = <span class="c-str">"Étudiant B.ing — 3e année"</span>;
+    <span class="c-type">char</span>  *lieu    = <span class="c-str">"Trois-Rivières, QC 🇨🇦"</span>;
+    <span class="c-type">int</span>    exp_ans = <span class="c-num">8</span>;
+    <span class="c-type">bool</span>   dispo   = <span class="c-keyword">true</span>;
+} Ingenieur_t;
+
+<span class="c-type">int</span> <span class="c-func">main</span>() {
+    Ingenieur_t moi;
+    <span class="c-func">optimiser</span>(moi.code);
+    <span class="c-func">fiabiliser</span>(moi.systeme);
+    <span class="c-keyword">return</span> <span class="c-num">SUCCESS</span>;
+}</pre>
+                </div>
+
+                <!-- Statistiques rapides -->
+                <div class="stats-row">
+                    <div class="stat">
+                        <span class="stat-num">8+</span>
+                        <span class="stat-label">Ans d'expérience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">3</span>
+                        <span class="stat-label">Diplômes</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">2</span>
+                        <span class="stat-label">Continents</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             À PROPOS
+             ===================================================== -->
+        <section id="about">
+            <div class="section-label">// 01 — À propos</div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>Un parcours forgé entre <em>deux continents</em>, une expertise à la croisée du <em>matériel, des réseaux et de l'intelligence</em>.</h2>
+                    <p>Formé en maintenance des systèmes informatiques et électroniques au Cameroun, j'ai consolidé mes compétences terrain pendant 8 ans comme responsable informatique avant de poursuivre un Baccalauréat en Génie Informatique à l'UQTR.</p>
+                    <p>Mon approche est celle d'un ingénieur de terrain : rigoureuse, orientée solution, avec une capacité éprouvée à diagnostiquer des problèmes complexes sous contrainte — temps, ressources, fiabilité. Du microcontrôleur au réseau d'entreprise, de l'OFDM au machine learning embarqué.</p>
+                    <div class="about-badges">
+                        <span class="badge">🇨🇦 Trois-Rivières, Québec</span>
+                        <span class="badge">🎓 B.ing. Génie Informatique</span>
+                        <span class="badge">🇨🇲 Expérience Internationale</span>
+                        <span class="badge">⚙️ C · Python · Linux</span>
+                        <span class="badge">🧠 ML &amp; Edge AI</span>
+                        <span class="badge">🌐 Réseaux &amp; Télécom</span>
+                        <span class="badge">🏭 Automatisation industrielle</span>
+                    </div>
+                </div>
+
+                <!-- Terminal décoratif -->
+                <div class="about-visual">
+                    <div class="terminal" role="img" aria-label="Terminal bash montrant les informations de profil">
+                        <div class="terminal-header">
+                            <span class="wdot red" aria-hidden="true"></span>
+                            <span class="wdot yellow" aria-hidden="true"></span>
+                            <span class="wdot green" aria-hidden="true"></span>
+                            <span class="terminal-title">bash — ulruch@uqtr</span>
+                        </div>
+                        <div class="terminal-body">
+                            <p><span class="t-prompt">$</span> whoami</p>
+                            <p class="t-output">ulruch_marcial_ngomen</p>
+                            <p><span class="t-prompt">$</span> cat formation.txt</p>
+                            <p class="t-output">► B.ing. Génie Informatique (UQTR, 2027)</p>
+                            <p class="t-output">► DEP Informatique/Électronique — Bamenda</p>
+                            <p class="t-output">► BTS Maintenance SI — Douala (2012)</p>
+                            <p><span class="t-prompt">$</span> cat langues.txt</p>
+                            <p class="t-output">► Français (natif) · Anglais (courant)</p>
+                            <p><span class="t-prompt">$</span> echo $DISPONIBILITE</p>
+                            <p class="t-output t-green">OUVERT STAGES &amp; OPPORTUNITÉS ✓</p>
+                            <p><span class="t-prompt">$</span> <span class="t-cursor" aria-hidden="true">█</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             FORMATION
+             ===================================================== -->
+        <section id="formation">
+            <div class="section-label">// 02 — Formation</div>
+            <h2>Parcours Académique</h2>
+            <div class="timeline">
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot active"></div>
+                    <div class="timeline-content">
+                        <div class="tl-header">
+                            <div>
+                                <h3>Baccalauréat en Génie Informatique</h3>
+                                <p class="tl-school">Université du Québec à Trois-Rivières (UQTR)</p>
+                            </div>
+                            <span class="tl-badge in-progress">En cours · Fin 2027</span>
+                        </div>
+                        <p class="tl-desc">Spécialisation systèmes embarqués, IA/ML et développement logiciel. Approche rigoureuse du cycle de développement : conception, implémentation, tests et déverminage.</p>
+                        <div class="tl-tags">
+                            <span>C / C++</span><span>Python</span><span>VHDL</span><span>CUDA C</span><span>Linux Kernel</span><span>Matlab</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="tl-header">
+                            <div>
+                                <h3>Diplôme en Informatique &amp; Électronique</h3>
+                                <p class="tl-school">Université de Bamenda, Cameroun</p>
+                            </div>
+                            <span class="tl-badge">2017</span>
+                        </div>
+                        <p class="tl-desc">Éq. québécoise : Diplôme de majeure (2 ans, 1er cycle universitaire) — Sciences de l'éducation, secteur technique. Fondements de l'enseignement technique en informatique et électronique.</p>
+                        <div class="tl-tags">
+                            <span>Électronique</span><span>Informatique</span><span>Pédagogie technique</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="tl-header">
+                            <div>
+                                <h3>BTS — Maintenance des Systèmes Informatiques &amp; Électroniques</h3>
+                                <p class="tl-school">Université de Douala, Cameroun</p>
+                            </div>
+                            <span class="tl-badge">2012</span>
+                        </div>
+                        <p class="tl-desc">Éq. québécoise : DEC en formation technique. Diagnostic électronique, maintenance matérielle avancée, réparation de systèmes embarqués de terrain.</p>
+                        <div class="tl-tags">
+                            <span>Maintenance</span><span>Électronique</span><span>Soudure</span><span>Diagnostic HW</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =====================================================
+             COMPÉTENCES
+             ===================================================== -->
+        <section id="skills">
+            <div class="section-label">// 03 — Compétences</div>
+            <h2>Stack Technique</h2>
+            <div class="skills-grid">
+
+                <!-- Carte 1 — Programmation Embarquée -->
+                <div class="skill-card reveal">
+                    <div class="skill-icon" aria-hidden="true">⚡</div>
+                    <h3>Programmation Embarquée</h3>
+                    <p>Développement bas niveau sur microcontrôleurs, gestion mémoire, drivers matériels et systèmes temps réel.</p>
+                    <div class="skill-tags">
+                        <span>C</span><span>C++</span><span>STM32</span><span>FreeRTOS</span><span>PWM</span><span>I2C</span><span>SPI</span><span>UART</span>
+                    </div>
+                    <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Niveau programmation embarquée">
+                        <div class="skill-fill" style="--fill: 90%"></div>
+                    </div>
+                    <span class="skill-level">Expert · 90%</span>
+                </div>
+
+                <!-- Carte 2 — IA & Machine Learning -->
+                <div class="skill-card reveal">
+                    <div class="skill-icon" aria-hidden="true">🧠</div>
+                    <h3>IA &amp; Machine Learning</h3>
+                    <p>ML supervisé, deep learning (LSTM), déploiement TinyML sur microcontrôleurs. Explainabilité et empreinte carbone.</p>
+                    <div class="skill-tags">
+                        <span>Python</span><span>TensorFlow</span><span>Scikit-learn</span><span>SHAP</span><span>TF Lite</span><span>TinyML</span><span>LSTM</span>
+                    </div>
+                    <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Niveau IA & Machine Learning">
+                        <div class="skill-fill" style="--fill: 75%"></div>
+                    </div>
+                    <span class="skill-level">Intermédiaire · 75%</span>
+                </div>
+
+                <!-- Carte 3 — Linux & Systèmes -->
+                <div class="skill-card reveal">
+                    <div class="skill-icon" aria-hidden="true">🐧</div>
+                    <h3>Linux &amp; Systèmes Embarqués</h3>
+                    <p>Cross-compilation, compilation noyau Linux, Buildroot, BusyBox et déploiement sur cibles ARM (Raspberry Pi).</p>
+                    <div class="skill-tags">
+                        <span>Linux Kernel</span><span>Buildroot</span><span>Crosstool-NG</span><span>U-Boot</span><span>BusyBox</span><span>Shell</span><span>Git</span>
+                    </div>
+                    <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Niveau Linux & Systèmes">
+                        <div class="skill-fill" style="--fill: 85%"></div>
+                    </div>
+                    <span class="skill-level">Avancé · 85%</span>
+                </div>
+
+                <!-- Carte 4 — Réseaux informatiques -->
+                <div class="skill-card reveal">
+                    <div class="skill-icon" aria-hidden="true">🌐</div>
+                    <h3>Réseaux Informatiques</h3>
+                    <p>Architecture LAN/WAN, segmentation VLAN, DMZ, routage inter-VLAN, ACL et NAT sur équipements Juniper réels.</p>
+                    <div class="skill-tags">
+                        <span>TCP/IP</span><span>VLAN</span><span>DMZ</span><span>NAT</span><span>ACL</span><span>Juniper</span><span>RabbitMQ</span><span>FTP/HTTP</span>
+                    </div>
+                    <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Niveau Réseaux informatiques">
+                        <div class="skill-fill" style="--fill: 80%"></div>
+                    </div>
+                    <span class="skill-level">Avancé · 80%</span>
+                </div>
+
+                <!-- Carte 5 — Télécommunications & DSP -->
+                <div class="skill-card reveal">
+                    <div class="skill-icon" aria-hidden="true">📡</div>
+                    <h3>Télécommunications &amp; DSP</h3>
+                    <p>Implémentation de systèmes OFDM temps réel sur radio logicielle SDR. Traitement du signal, synchronisation et compensation d'imperfections RF.</p>
+                    <div class="skill-tags">
+                        <span>OFDM</span><span>SDR</span><span>BladeRF</span><span>MATLAB</span><span>Simulink</span><span>DSP</span><span>CFO/STO</span><span>Python</span>
+                    </div>
+                    <div class="skill-bar" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" aria-label="Niveau Télécommunications">
+                        <div class="skill-fill" style="--fill: 72%"></div>
+                    </div>
+                    <span class="skill-level">Intermédiaire · 72%</span>
+                </div>
+
+                <!-- Carte 6 — Automatisation industrielle -->
+                <div class="skill-card reveal">
+                    <div class="skill-icon" aria-hidden="true">🏭</div>
+                    <h3>Automatisation Industrielle</h3>
+                    <p>Programmation d'automates (PLC) en Ladder et GRAFCET, interfaces HMI et communication inter-automates sur stations FESTO.</p>
+                    <div class="skill-tags">
+                        <span>Ladder</span><span>GRAFCET</span><span>PLC Micrologix</span><span>RSLogix 500</span><span>FactoryTalk</span><span>FESTO</span>
+                    </div>
+                    <div class="skill-bar" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" aria-label="Niveau Automatisation industrielle">
+                        <div class="skill-fill" style="--fill: 78%"></div>
+                    </div>
+                    <span class="skill-level">Avancé · 78%</span>
+                </div>
+
+                <!-- Carte 7 — Calcul accéléré GPU -->
+                <div class="skill-card reveal">
+                    <div class="skill-icon" aria-hidden="true">🚀</div>
+                    <h3>Calcul Accéléré &amp; FPGA</h3>
+                    <p>Programmation GPU en CUDA C, optimisation de kernels (mémoire partagée, coalescing) et conception numérique en VHDL/cHDL.</p>
+                    <div class="skill-tags">
+                        <span>CUDA C</span><span>VHDL</span><span>cHDL</span><span>GPU</span><span>Nsight</span><span>ModelSim</span><span>Parallélisme</span>
+                    </div>
+                    <div class="skill-bar" role="progressbar" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100" aria-label="Niveau Calcul accéléré">
+                        <div class="skill-fill" style="--fill: 76%"></div>
+                    </div>
+                    <span class="skill-level">Intermédiaire · 76%</span>
+                </div>
+
+                <!-- Carte 8 — Asservissement & Contrôle -->
+                <div class="skill-card reveal">
+                    <div class="skill-icon" aria-hidden="true">📐</div>
+                    <h3>Asservissement &amp; Contrôle</h3>
+                    <p>Modélisation de systèmes dynamiques, fonctions de transfert, conception de correcteurs PID et validation en simulation.</p>
+                    <div class="skill-tags">
+                        <span>MATLAB</span><span>Simulink</span><span>PID</span><span>Bode</span><span>Laplace</span><span>Automatique</span>
+                    </div>
+                    <div class="skill-bar" role="progressbar" aria-valuenow="74" aria-valuemin="0" aria-valuemax="100" aria-label="Niveau Asservissement">
+                        <div class="skill-fill" style="--fill: 74%"></div>
+                    </div>
+                    <span class="skill-level">Intermédiaire · 74%</span>
+                </div>
+
+                <!-- Carte 9 — Maintenance Matérielle -->
+                <div class="skill-card reveal">
+                    <div class="skill-icon" aria-hidden="true">🔩</div>
+                    <h3>Maintenance Matérielle</h3>
+                    <p>Diagnostic de pannes électroniques, réparation de cartes, soudure de précision et 8 ans d'intervention terrain sur systèmes critiques.</p>
+                    <div class="skill-tags">
+                        <span>Diagnostic HW</span><span>Soudure</span><span>Cartes électroniques</span><span>Altium</span><span>Oscilloscope</span>
+                    </div>
+                    <div class="skill-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="Niveau Maintenance Matérielle">
+                        <div class="skill-fill" style="--fill: 95%"></div>
+                    </div>
+                    <span class="skill-level">Expert · 95%</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =====================================================
+             PROJETS — Projets réels UQTR
+             ===================================================== -->
+        <section id="projects">
+            <div class="section-label">// 04 — Projets</div>
+            <h2>Réalisations Techniques</h2>
+            <p class="section-intro">Projets académiques réalisés à l'UQTR couvrant les systèmes embarqués, l'IA, les réseaux et le calcul accéléré.</p>
+
+            <!-- Filtres par catégorie -->
+            <div class="project-filters" role="group" aria-label="Filtrer les projets">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="embarque">Embarqué</button>
+                <button class="filter-btn" data-filter="ia">IA / ML</button>
+                <button class="filter-btn" data-filter="reseau">Réseau</button>
+                <button class="filter-btn" data-filter="systeme">OS / Linux</button>
+            </div>
+
+            <div class="projects-grid" id="projectsGrid">
+
+                <!-- PROJET 1 — Robot à chenilles STM32 -->
+                <article class="project-card reveal" data-category="embarque">
+                    <div class="project-header">
+                        <div class="project-icon" aria-hidden="true">🤖</div>
+                        <div class="project-links">
+                            <span class="project-course">GEI1049</span>
+                        </div>
+                    </div>
+                    <h3>Robot à chenilles — Commande STM32 + Wiimote</h3>
+                    <p class="project-desc">Pilotage d'un véhicule motorisé à chenilles avec un STM32F446RE. Génération PWM 2 kHz pour contrôler deux moteurs CC, 3 modes autonomes (cercle, ligne droite, carré), commande manuelle via manette Wii (I2C), et affichage temps réel sur LCD avec horloge RTC.</p>
+                    <div class="project-tags">
+                        <span>C</span><span>STM32</span><span>PWM</span><span>FreeRTOS</span><span>I2C</span><span>LCD</span><span>RTC</span>
+                    </div>
+                    <div class="project-status">
+                        <span class="status-dot"></span> GEI1049 · Circuits numériques programmables · UQTR
+                    </div>
+                </article>
+
+                <!-- PROJET 2 — Système embarqué STM32 capteurs -->
+                <article class="project-card reveal" data-category="embarque">
+                    <div class="project-header">
+                        <div class="project-icon" aria-hidden="true">🌡️</div>
+                        <div class="project-links">
+                            <span class="project-course">GEI1083</span>
+                        </div>
+                    </div>
+                    <h3>Système embarqué STM32 — Capteurs I2C/SPI + FreeRTOS</h3>
+                    <p class="project-desc">Développement sur STM32L4xx avec STM32CubeIDE/MX. Configuration et lecture d'un capteur d'humidité/température et d'un gyroscope via SPI et I2C. Transmission des données par UART et application Python host pour visualisation et journalisation CSV en temps réel.</p>
+                    <div class="project-tags">
+                        <span>C</span><span>STM32L4</span><span>SPI</span><span>I2C</span><span>UART</span><span>FreeRTOS</span><span>Python</span>
+                    </div>
+                    <div class="project-status">
+                        <span class="status-dot"></span> GEI1083 · Conception de systèmes embarqués · UQTR
+                    </div>
+                </article>
+
+                <!-- PROJET 3 — Linux embarqué Raspberry Pi 5 (Crosstool-NG) -->
+                <article class="project-card reveal" data-category="systeme">
+                    <div class="project-header">
+                        <div class="project-icon" aria-hidden="true">🐧</div>
+                        <div class="project-links">
+                            <span class="project-course">GEI1089</span>
+                        </div>
+                    </div>
+                    <h3>Linux embarqué Raspberry Pi 5 — Cross-compilation from scratch</h3>
+                    <p class="project-desc">Construction d'un outil de cross-compilation avec Crosstool-NG sur Ubuntu 22.04 ciblant le Raspberry Pi 5 (ARM64). Compilation complète du bootloader U-Boot, du noyau Linux et de BusyBox. Déploiement du système final sur carte SD et démarrage validé en laboratoire.</p>
+                    <div class="project-tags">
+                        <span>C</span><span>Crosstool-NG</span><span>U-Boot</span><span>Linux Kernel</span><span>BusyBox</span><span>ARM64</span>
+                    </div>
+                    <div class="project-status">
+                        <span class="status-dot"></span> GEI1089 · Systèmes d'exploitation embarqués · UQTR
+                    </div>
+                </article>
+
+                <!-- PROJET 4 — Buildroot + PyQt5 GUI moteur -->
+                <article class="project-card reveal" data-category="systeme">
+                    <div class="project-header">
+                        <div class="project-icon" aria-hidden="true">⚙️</div>
+                        <div class="project-links">
+                            <span class="project-course">GEI1072</span>
+                        </div>
+                    </div>
+                    <h3>Système Linux embarqué Buildroot — GUI de contrôle moteur</h3>
+                    <p class="project-desc">Configuration de Buildroot pour le Raspberry Pi 5 avec intégration de Python et PyQt5. Personnalisation du noyau Linux et du système de fichiers racine. Intégration d'une application GUI de contrôle de moteur CC via script post-build.sh. Débogage des dépendances et tests sur cible réelle.</p>
+                    <div class="project-tags">
+                        <span>C</span><span>Buildroot</span><span>Python</span><span>PyQt5</span><span>Linux</span><span>Raspberry Pi 5</span>
+                    </div>
+                    <div class="project-status">
+                        <span class="status-dot"></span> GEI1072 · Résolution de problèmes en C · UQTR
+                    </div>
+                </article>
+
+                <!-- PROJET 5 — Réseau VLANs + DMZ Juniper -->
+                <article class="project-card reveal" data-category="reseau">
+                    <div class="project-header">
+                        <div class="project-icon" aria-hidden="true">🌐</div>
+                        <div class="project-links">
+                            <span class="project-course">GEI1091</span>
+                        </div>
+                    </div>
+                    <h3>Architecture réseau sécurisée — VLANs, DMZ & NAT Juniper</h3>
+                    <p class="project-desc">Conception et configuration d'un LAN avec deux VLANs distincts (étudiants info / génie électrique), une DMZ hébergeant des Raspberry Pi (HTTP, FTP, RabbitMQ) et routage inter-VLAN avec restrictions ACL. Équipements Juniper réels, NAT source pour accès WAN, et scripts d'automatisation de déploiement.</p>
+                    <div class="project-tags">
+                        <span>Juniper</span><span>VLAN</span><span>DMZ</span><span>NAT</span><span>ACL</span><span>RabbitMQ</span><span>Raspberry Pi</span>
+                    </div>
+                    <div class="project-status">
+                        <span class="status-dot"></span> GEI1091 · Réseaux informatiques · UQTR
+                    </div>
+                </article>
+
+                <!-- PROJET 6 — Transceiver OFDM SDR BladeRF -->
+                <article class="project-card reveal" data-category="embarque">
+                    <div class="project-header">
+                        <div class="project-icon" aria-hidden="true">📡</div>
+                        <div class="project-links">
+                            <span class="project-course">GEI1056</span>
+                        </div>
+                    </div>
+                    <h3>Transceiver SISO-OFDM temps réel sur BladeRF 2.0</h3>
+                    <p class="project-desc">Implémentation d'un système OFDM complet (émetteur + récepteur) en Python et MATLAB/Simulink sur radio logicielle BladeRF 2.0. Synchronisation, compensation CFO/STO, estimation du canal et détection. Analyse des imperfections matérielles (IQ imbalance) en liaison RF câblée.</p>
+                    <div class="project-tags">
+                        <span>Python</span><span>MATLAB</span><span>Simulink</span><span>OFDM</span><span>SDR</span><span>BladeRF</span><span>DSP</span>
+                    </div>
+                    <div class="project-status">
+                        <span class="status-dot"></span> GEI1056 · Systèmes de télécommunications · UQTR
+                    </div>
+                </article>
+
+                <!-- PROJET 7 — Analyse de sentiment + TinyML -->
+                <article class="project-card reveal" data-category="ia">
+                    <div class="project-header">
+                        <div class="project-icon" aria-hidden="true">🧠</div>
+                        <div class="project-links">
+                            <span class="project-course">GEI1092</span>
+                        </div>
+                    </div>
+                    <h3>Analyse de sentiment IMDb — TinyML sur Arduino</h3>
+                    <p class="project-desc">Pipeline ML complet : prétraitement TF-IDF, régression logistique (IMDb dataset), tuning d'hyperparamètres, évaluation SHAP/LIME, mesure d'empreinte carbone (CodeCarbon). Déploiement TinyML : quantification et export en header C++ pour inférence sur Arduino à arithmétique entière uniquement.</p>
+                    <div class="project-tags">
+                        <span>Python</span><span>Scikit-learn</span><span>SHAP</span><span>TinyML</span><span>Arduino</span><span>C++</span><span>TF-IDF</span>
+                    </div>
+                    <div class="project-status">
+                        <span class="status-dot"></span> GEI1092 · Techniques d'IA · UQTR
+                    </div>
+                </article>
+
+                <!-- PROJET 8 — Bi-LSTM sentiment + TensorFlow Lite -->
+                <article class="project-card reveal" data-category="ia">
+                    <div class="project-header">
+                        <div class="project-icon" aria-hidden="true">🔬</div>
+                        <div class="project-links">
+                            <span class="project-course">GEI1092</span>
+                        </div>
+                    </div>
+                    <h3>Analyse de sentiment — Bi-LSTM + TensorFlow Lite</h3>
+                    <p class="project-desc">Réseau de neurones récurrents avec couches Bidirectional LSTM empilées. Tokenisation Keras, EarlyStopping, tuning (lr, dropout, batch size). Explicabilité SHAP & LIME. Conversion TensorFlow Lite pour déploiement embarqué : comparaison taille modèle, temps d'inférence et précision avant/après quantification.</p>
+                    <div class="project-tags">
+                        <span>Python</span><span>TensorFlow</span><span>Bi-LSTM</span><span>SHAP</span><span>LIME</span><span>TF Lite</span><span>Keras</span>
+                    </div>
+                    <div class="project-status">
+                        <span class="status-dot"></span> GEI1092 · Techniques d'IA · UQTR
+                    </div>
+                </article>
+
+                <!-- PROJET 9 — CUDA C MIMO / NSA -->
+                <article class="project-card reveal" data-category="ia">
+                    <div class="project-header">
+                        <div class="project-icon" aria-hidden="true">⚡</div>
+                        <div class="project-links">
+                            <span class="project-course">GEI1084</span>
+                        </div>
+                    </div>
+                    <h3>Inversion matricielle GPU — Massive MIMO avec CUDA C</h3>
+                    <p class="project-desc">Implémentation de l'algorithme NSA (Neumann Series Approximation) pour l'inversion matricielle massive MIMO sur GPU en CUDA C. Optimisation des kernels (mémoire partagée, coalescing), profilage avec Nsight Compute et validation des résultats par comparaison avec MATLAB. Extension du processeur cycle pour instructions CMP en cHDL.</p>
+                    <div class="project-tags">
+                        <span>CUDA C</span><span>GPU</span><span>MATLAB</span><span>cHDL</span><span>Calcul parallèle</span><span>MIMO</span>
+                    </div>
+                    <div class="project-status">
+                        <span class="status-dot"></span> GEI1084 · Architecture & calcul accéléré · UQTR
+                    </div>
+                </article>
+
+                <!-- PROJET 10 — Automate industriel Ladder -->
+                <article class="project-card reveal" data-category="embarque">
+                    <div class="project-header">
+                        <div class="project-icon" aria-hidden="true">🏭</div>
+                        <div class="project-links">
+                            <span class="project-course">GEI1087</span>
+                        </div>
+                    </div>
+                    <h3>Automatisation industrielle — PLC Micrologix + GRAFCET</h3>
+                    <p class="project-desc">Programmation d'un automate Micrologix 1100 en Ladder (RSLogix 500) sur stations FESTO. Conception du GRAFCET, implémentation de la logique de séquencement, communication inter-automates et création d'une interface homme-machine avec FactoryTalk View Studio. Analyse des risques et contraintes temporelles.</p>
+                    <div class="project-tags">
+                        <span>Ladder</span><span>PLC</span><span>GRAFCET</span><span>RSLogix 500</span><span>FactoryTalk</span><span>FESTO</span>
+                    </div>
+                    <div class="project-status">
+                        <span class="status-dot"></span> GEI1087 · Automatisation industrielle · UQTR
+                    </div>
+                </article>
+
+                <!-- PROJET 11 — Base de données Oracle -->
+                <article class="project-card reveal" data-category="systeme">
+                    <div class="project-header">
+                        <div class="project-icon" aria-hidden="true">🗄️</div>
+                        <div class="project-links">
+                            <span class="project-course">SMI1001</span>
+                        </div>
+                    </div>
+                    <h3>Base de données — Gestion de conférence scientifique</h3>
+                    <p class="project-desc">Modélisation et implémentation Oracle d'une base de données pour conférence internationale : participants, comité, soumissions d'articles et évaluations. Diagramme ER rigoureux, 10+ requêtes SQL avancées et 5 triggers (contraintes temporelles, acceptation conditionnelle, exemptions de paiement).</p>
+                    <div class="project-tags">
+                        <span>Oracle SQL</span><span>SQL Triggers</span><span>ER Diagram</span><span>Modélisation</span>
+                    </div>
+                    <div class="project-status">
+                        <span class="status-dot"></span> SMI1001 · Bases de données I · UQTR
+                    </div>
+                </article>
+
+                <!-- PROJET 12 — Asservissement Matlab/Simulink -->
+                <article class="project-card reveal" data-category="embarque">
+                    <div class="project-header">
+                        <div class="project-icon" aria-hidden="true">📐</div>
+                        <div class="project-links">
+                            <span class="project-course">GEI1013</span>
+                        </div>
+                    </div>
+                    <h3>Asservissement d'un système physique — Correcteurs MATLAB</h3>
+                    <p class="project-desc">Modélisation et asservissement d'un système physique réel. Formulation des fonctions de transfert, construction des diagrammes de blocs, analyse de la réponse fréquentielle et conception/mise en œuvre de correcteurs (P, PI, PID) en MATLAB/Simulink. Validation en simulation.</p>
+                    <div class="project-tags">
+                        <span>MATLAB</span><span>Simulink</span><span>PID</span><span>Automatique</span><span>Asservissement</span>
+                    </div>
+                    <div class="project-status">
+                        <span class="status-dot"></span> GEI1013 · Asservissements linéaires · UQTR
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Lien vers GitHub -->
+            <div class="projects-cta">
+                <a href="https://github.com/ulruchmarcial" target="_blank" rel="noopener" class="btn btn-ghost">
+                    <span aria-hidden="true">🐙</span> Voir tous les projets sur GitHub
+                </a>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             EXPÉRIENCE
+             ===================================================== -->
+        <section id="experience">
+            <div class="section-label">// 05 — Expérience</div>
+            <h2>Parcours Professionnel</h2>
+            <div class="timeline">
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot active"></div>
+                    <div class="timeline-content">
+                        <div class="tl-header">
+                            <div>
+                                <h3>Responsable Informatique</h3>
+                                <p class="tl-school">DAK Services · Douala, Cameroun</p>
+                            </div>
+                            <span class="tl-badge">2015 — 2023</span>
+                        </div>
+                        <p class="tl-desc">Gestion de bout en bout de l'infrastructure informatique et électronique d'une structure de services. Responsabilité totale de la fiabilité et de la disponibilité des systèmes critiques.</p>
+                        <ul class="tl-list">
+                            <li>Diagnostic et résolution de pannes matérielles et logicielles complexes</li>
+                            <li>Maintenance préventive et curative de systèmes informatiques et électroniques</li>
+                            <li>Interventions sous contraintes fortes (délais, matériel rare, fiabilité exigée)</li>
+                            <li>Formation et encadrement de techniciens juniors</li>
+                        </ul>
+                        <div class="tl-tags">
+                            <span>Gestion de parc</span><span>Maintenance</span><span>Leadership</span><span>Systèmes critiques</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="tl-header">
+                            <div>
+                                <h3>Technicien de Maintenance Informatique</h3>
+                                <p class="tl-school">Transval · Douala, Cameroun</p>
+                            </div>
+                            <span class="tl-badge">2012 — 2014</span>
+                        </div>
+                        <p class="tl-desc">Maintenance électronique terrain dans un environnement industriel exigeant, au contact de matériels variés et sous conditions contraintes.</p>
+                        <ul class="tl-list">
+                            <li>Dépannage de cartes électroniques complexes</li>
+                            <li>Réparation, soudure et remise en service d'équipements</li>
+                            <li>Analyse systématique de défaillances matérielles</li>
+                        </ul>
+                        <div class="tl-tags">
+                            <span>Électronique</span><span>Soudure</span><span>Diagnostic</span><span>Industriel</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =====================================================
+             CONTACT
+             ===================================================== -->
+        <section id="contact">
+            <div class="section-label">// 06 — Contact</div>
+            <div class="contact-wrapper">
+                <div class="contact-text">
+                    <h2>Travaillons <em>ensemble</em>.</h2>
+                    <p>Disponible pour des stages, projets académiques collaboratifs ou opportunités professionnelles en systèmes embarqués et IA. Je réponds rapidement.</p>
+                    <div class="contact-links">
+                        <a href="https://www.linkedin.com/in/ulruch-marcial-ngomen-a6b33931a/" target="_blank" rel="noopener" class="contact-link">
+                            <span class="contact-link-icon" aria-hidden="true">💼</span>
+                            linkedin.com/in/ulruch-marcial-ngomen
+                        </a>
+                        <a href="https://github.com/ulruchmarcial" target="_blank" rel="noopener" class="contact-link">
+                            <span class="contact-link-icon" aria-hidden="true">🐙</span>
+                            github.com/ulruchmarcial
+                        </a>
+                        <!-- ⚠️ Remplace TON_EMAIL@uqtr.ca par ton vrai email -->
+                        <a href="mailto:TON_EMAIL@uqtr.ca" class="contact-link">
+                            <span class="contact-link-icon" aria-hidden="true">✉️</span>
+                            TON_EMAIL@uqtr.ca
+                        </a>
+                    </div>
+                    <div class="contact-note">
+                        <span aria-hidden="true">📍</span> Trois-Rivières, Québec, Canada
+                    </div>
+                </div>
+
+                <!-- =====================================================
+                     FORMULAIRE FORMSPREE
+                     Pour l'activer :
+                     1. Va sur https://formspree.io et crée un compte gratuit
+                     2. Crée un nouveau formulaire — tu obtiens un ID comme "xpwzabcd"
+                     3. Remplace FORMSPREE_ID dans l'action ci-dessous par cet ID
+                     ===================================================== -->
+                <form
+                    class="contact-form"
+                    id="contactForm"
+                    action="https://formspree.io/f/FORMSPREE_ID"
+                    method="POST"
+                >
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" name="name" placeholder="Marie Dupont" required autocomplete="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Adresse email</label>
+                        <input type="email" id="email" name="email" placeholder="marie@entreprise.com" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="sujet">Sujet</label>
+                        <select id="sujet" name="sujet">
+                            <option value="">— Choisir un sujet —</option>
+                            <option>Proposition de stage</option>
+                            <option>Collaboration académique</option>
+                            <option>Opportunité professionnelle</option>
+                            <option>Autre</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Décrivez votre projet ou opportunité..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary full-width">
+                        Envoyer <span class="btn-arrow" aria-hidden="true">→</span>
+                    </button>
+                    <!-- Message de confirmation affiché après envoi -->
+                    <p class="form-success" id="formSuccess" aria-live="polite">✅ Message envoyé ! Je vous réponds rapidement.</p>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <span class="logo-bracket">&lt;</span>Ulruch Marcial Ngomen<span class="logo-bracket">/&gt;</span>
+            </div>
+            <!-- L'année est mise à jour automatiquement par JavaScript -->
+            <p class="footer-copy">&copy; <span id="footerYear"></span> · Génie Informatique · UQTR · Trois-Rivières, QC</p>
+            <div class="footer-links">
+                <a href="#hero">↑ Retour en haut</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
