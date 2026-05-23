@@ -20,12 +20,14 @@ const themeBtn = document.getElementById('theme-toggle');
 const tIcon    = themeBtn.querySelector('.toggle-icon');
 const tText    = themeBtn.querySelector('.toggle-text');
 
-// Applique le thème sauvegardé au chargement de la page
-if (localStorage.getItem('theme') === 'light') {
-    document.body.classList.add('light-mode');
-    tIcon.textContent = '🌙';
-    if (tText) tText.textContent = 'Mode Sombre';
-}
+// Mode clair par défaut. Si l'utilisateur a choisi le mode sombre, on l'applique.
+try {
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.remove('light-mode');
+        tIcon.textContent = '☀️';
+        if (tText) tText.textContent = 'Mode Clair';
+    }
+} catch (_) { /* localStorage inaccessible en navigation privée */ }
 
 themeBtn.addEventListener('click', () => {
     document.body.classList.toggle('light-mode');
@@ -33,7 +35,7 @@ themeBtn.addEventListener('click', () => {
     tIcon.textContent = isLight ? '🌙' : '☀️';
     if (tText) tText.textContent = isLight ? 'Mode Sombre' : 'Mode Clair';
     // Sauvegarde le choix dans le navigateur
-    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    try { localStorage.setItem('theme', isLight ? 'light' : 'dark'); } catch (_) {}
 });
 
 /* ============================================================
@@ -159,14 +161,17 @@ if (form) {
         btn.disabled = true;
 
         try {
-            // Envoie les données au service Formspree
+            // Envoie les données au service Formsubmit
             const response = await fetch(form.action, {
                 method: 'POST',
                 body: new FormData(form),
                 headers: { 'Accept': 'application/json' }
             });
 
-            if (response.ok) {
+            let data = {};
+            try { data = await response.json(); } catch (_) {}
+
+            if (response.ok && data.success != false) {
                 // Succès : affiche le message de confirmation
                 if (formSuccess) formSuccess.classList.add('visible');
                 form.reset(); // Vide le formulaire
@@ -183,8 +188,7 @@ if (form) {
                     if (formSuccess) formSuccess.classList.remove('visible');
                 }, 4000);
             } else {
-                // Erreur Formspree
-                throw new Error('Erreur serveur');
+                throw new Error(data.message || 'Erreur serveur');
             }
         } catch {
             // Erreur réseau ou autre
@@ -304,7 +308,13 @@ if (roleEl) {
 
         // Affiche le texte avec le curseur clignotant
         const displayed = currentRole.slice(0, state.charIndex);
-        roleEl.innerHTML = displayed + '<span class="t-cursor" aria-hidden="true" style="font-size:1rem">|</span>';
+        roleEl.textContent = displayed;
+        const cursor = document.createElement('span');
+        cursor.className = 't-cursor';
+        cursor.setAttribute('aria-hidden', 'true');
+        cursor.style.fontSize = '1rem';
+        cursor.textContent = '|';
+        roleEl.appendChild(cursor);
 
         // Planifie la prochaine itération
         const speed = state.deleting ? DELETING_SPEED : TYPING_SPEED;

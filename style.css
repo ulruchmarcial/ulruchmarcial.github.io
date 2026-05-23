@@ -66,6 +66,9 @@ body {
     line-height: 1.7;
     overflow-x: hidden;
     transition: background var(--t), color var(--t);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 /* Texture de bruit décorative superposée sur tout le site */
@@ -860,7 +863,50 @@ body.light-mode .skill-bar { background: rgba(0, 0, 0, 0.08); }
 }
 
 /* ============================================================
-   FILTRES PROJETS
+   CARTE DE RECHERCHE — Style spécial pour la bourse BCRP
+   Distinct des autres expériences pour la mettre en valeur
+   ============================================================ */
+.research-card {
+    border-color: rgba(129, 140, 248, 0.3) !important;
+    background: linear-gradient(
+        135deg,
+        var(--card-bg) 0%,
+        rgba(129, 140, 248, 0.04) 100%
+    ) !important;
+    position: relative;
+}
+
+/* Ligne colorée en haut — violet pour distinguer de l'accent bleu */
+.research-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-2), var(--accent));
+    border-radius: var(--radius) var(--radius) 0 0;
+}
+
+/* Badge "Bourse BCRP" en haut de la carte */
+.research-badge-top {
+    margin-bottom: 0.9rem;
+}
+
+.research-award {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.72rem;
+    font-family: var(--font-mono);
+    color: var(--accent-2);
+    background: rgba(129, 140, 248, 0.1);
+    border: 1px solid rgba(129, 140, 248, 0.25);
+    padding: 4px 12px;
+    border-radius: 20px;
+    letter-spacing: 0.04em;
+    font-weight: 700;
+}
+
+/* ============================================================
    Boutons pour filtrer par catégorie
    ============================================================ */
 .project-filters {
@@ -1074,6 +1120,25 @@ footer { border-top: 1px solid var(--card-border); padding: 1.8rem 5%; }
     transition: opacity 0.65s ease, transform 0.65s ease;
 }
 .reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ============================================================
+   ACCESSIBILITÉ — Respect des préférences de mouvement réduit
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+    .skill-fill {
+        transition: none !important;
+    }
+}
 
 /* ============================================================
    RESPONSIVE — Tablette (< 960px)

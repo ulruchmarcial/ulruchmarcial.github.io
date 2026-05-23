@@ -25,7 +25,7 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="light-mode">
 
     <!-- Texture de bruit décorative en arrière-plan -->
     <div class="noise" aria-hidden="true"></div>
@@ -54,8 +54,8 @@
             <div class="nav-actions">
                 <!-- Bouton thème clair/sombre -->
                 <button id="theme-toggle" aria-label="Changer le thème">
-                    <span class="toggle-icon">☀️</span>
-                    <span class="toggle-text">Mode Clair</span>
+                    <span class="toggle-icon">🌙</span>
+                    <span class="toggle-text">Mode Sombre</span>
                 </button>
 
                 <!-- Bouton hamburger — visible seulement sur mobile -->
@@ -87,7 +87,7 @@
                 </h1>
 
                 <!-- Texte animé qui change (typing effect) -->
-                <p class="hero-role" id="heroRole">Systèmes Embarqués <span class="sep">//</span> IA <span class="sep">//</span> Réseaux</p>
+                <p class="hero-role" id="heroRole" aria-live="polite" role="status">Systèmes Embarqués <span class="sep">//</span> IA <span class="sep">//</span> Réseaux</p>
 
                 <p class="hero-sub">
                     Du registre matériel à l'intelligence artificielle, des protocoles réseau aux télécommunications — je conçois des systèmes fiables, performants et connectés. Double expertise en informatique et électronique, forgée sur deux continents.
@@ -103,7 +103,7 @@
                     <a href="https://github.com/ulruchmarcial" target="_blank" rel="noopener" class="btn btn-ghost">
                         <span aria-hidden="true">🐙</span> GitHub
                     </a>
-                    <a href="https://www.linkedin.com/in/ulruch-marcial-ngomen-a6b33931a/" target="_blank" rel="noopener" class="btn btn-ghost">
+                    <a href="https://www.linkedin.com/in/ulruch-marcial-ngomen-a6b33931a" target="_blank" rel="noopener" class="btn btn-ghost">
                         <span aria-hidden="true">💼</span> LinkedIn
                     </a>
                 </div>
@@ -223,7 +223,7 @@
                             </div>
                             <span class="tl-badge in-progress">En cours · Fin 2027</span>
                         </div>
-                        <p class="tl-desc">Spécialisation systèmes embarqués, IA/ML et développement logiciel. Approche rigoureuse du cycle de développement : conception, implémentation, tests et déverminage.</p>
+                        <p class="tl-desc">Spécialisation systèmes embarqués réseaux et télécommunications, IA/ML et développement logiciel. Approche rigoureuse du cycle de développement : conception, implémentation, tests et déverminage.</p>
                         <div class="tl-tags">
                             <span>C / C++</span><span>Python</span><span>VHDL</span><span>CUDA C</span><span>Linux Kernel</span><span>Matlab</span>
                         </div>
@@ -235,7 +235,7 @@
                     <div class="timeline-content">
                         <div class="tl-header">
                             <div>
-                                <h3>Diplôme en Informatique &amp; Électronique</h3>
+                                <h3>Diplôme de professeur de l'enseignement secondaire en Informatique &amp; Électronique</h3>
                                 <p class="tl-school">Université de Bamenda, Cameroun</p>
                             </div>
                             <span class="tl-badge">2017</span>
@@ -657,6 +657,37 @@
             <h2>Parcours Professionnel</h2>
             <div class="timeline">
 
+                <!-- BOURSE BCRP — Recherche en cours -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot active"></div>
+                    <div class="timeline-content research-card">
+                        <div class="research-badge-top">
+                            <span class="research-award" aria-label="Bourse de recherche">🏆 Bourse BCRP (Bourses de recherche de premier cycle) financée par le Conseil de recherches en sciences naturelles et en génie du Canada (CRSNG)</span>
+                        </div>
+                        <div class="tl-header">
+                            <div>
+                                <h3>Chercheur — Co-conception sur RISC-V</h3>
+                                <p class="tl-school">UQTR ·  Laboratoire des Signaux et Systèmes Intégrés (LSSI)</p>
+                            </div>
+                            <span class="tl-badge in-progress">En cours · Mai — Août 2025</span>
+                        </div>
+                        <p class="tl-desc">
+                            Le projet sur lequel je travaille porte sur la : <em>Co-conception efficace pour le contrôle des RIS — Calcul approximatif, ISA personnalisée et co-conception assistée par LLM sur RISC-V.</em>
+                            L'ideé principale est l'optimisation de l'inférence SNN–QNN sur plateforme RISC-V pour le contrôle de surfaces intelligentes reconfigurables (RIS) en communications sans fil.
+                        </p>
+                        <ul class="tl-list">
+                            <li>Profilage des goulots d'étranglement d'un modèle SNN–QNN (traitement d'impulsions, opérations matricielles) sur cœur RISC-V Ibex</li>
+                            <li>Application du calcul approximatif : réduction de précision des poids, accumulation tronquée, exploitation de la parcimonie des signaux</li>
+                            <li>Conception d'extensions ISA personnalisées pour accélérer l'accumulation d'impulsions et la mise à jour des états neuronaux</li>
+                            <li>Boucle de co-conception assistée par LLM : génération de code optimisé et exploration automatisée de l'espace de conception matériel–logiciel</li>
+                            <li>Évaluation expérimentale des compromis précision / latence / consommation énergétique sur cible embarquée</li>
+                        </ul>
+                        <div class="tl-tags">
+                            <span>RISC-V</span><span>SNN</span><span>QNN</span><span>Calcul approximatif</span><span>ISA custom</span><span>LLM</span><span>RIS</span><span>C</span><span>Edge AI</span><span>VHDL</span>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="timeline-item reveal">
                     <div class="timeline-dot active"></div>
                     <div class="timeline-content">
@@ -715,7 +746,7 @@
                     <h2>Travaillons <em>ensemble</em>.</h2>
                     <p>Disponible pour des stages, projets académiques collaboratifs ou opportunités professionnelles en systèmes embarqués et IA. Je réponds rapidement.</p>
                     <div class="contact-links">
-                        <a href="https://www.linkedin.com/in/ulruch-marcial-ngomen-a6b33931a/" target="_blank" rel="noopener" class="contact-link">
+                        <a href="https://www.linkedin.com/in/ulruch-marcial-ngomen-a6b33931a" target="_blank" rel="noopener" class="contact-link">
                             <span class="contact-link-icon" aria-hidden="true">💼</span>
                             linkedin.com/in/ulruch-marcial-ngomen
                         </a>
@@ -723,10 +754,13 @@
                             <span class="contact-link-icon" aria-hidden="true">🐙</span>
                             github.com/ulruchmarcial
                         </a>
-                        <!-- ⚠️ Remplace TON_EMAIL@uqtr.ca par ton vrai email -->
-                        <a href="mailto:TON_EMAIL@uqtr.ca" class="contact-link">
+                        <a href="mailto:Ulruch.Marcial.Ngomen@uqtr.ca" class="contact-link">
                             <span class="contact-link-icon" aria-hidden="true">✉️</span>
-                            TON_EMAIL@uqtr.ca
+                            Ulruch.Marcial.Ngomen@uqtr.ca
+                        </a>
+                        <a href="mailto:marcialngomen@gmail.com" class="contact-link">
+                            <span class="contact-link-icon" aria-hidden="true">✉️</span>
+                            marcialngomen@gmail.com
                         </a>
                     </div>
                     <div class="contact-note">
@@ -734,26 +768,23 @@
                     </div>
                 </div>
 
-                <!-- =====================================================
-                     FORMULAIRE FORMSPREE
-                     Pour l'activer :
-                     1. Va sur https://formspree.io et crée un compte gratuit
-                     2. Crée un nouveau formulaire — tu obtiens un ID comme "xpwzabcd"
-                     3. Remplace FORMSPREE_ID dans l'action ci-dessous par cet ID
-                     ===================================================== -->
                 <form
                     class="contact-form"
                     id="contactForm"
-                    action="https://formspree.io/f/FORMSPREE_ID"
+                    action="https://formsubmit.co/ajax/marcialngomen@gmail.com"
                     method="POST"
                 >
+                    <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_cc" value="Ulruch.Marcial.Ngomen@uqtr.ca">
                     <div class="form-group">
                         <label for="name">Nom complet</label>
-                        <input type="text" id="name" name="name" placeholder="Marie Dupont" required autocomplete="name">
+                        <input type="text" id="name" name="name" placeholder="Frank Nya " required autocomplete="name">
                     </div>
                     <div class="form-group">
                         <label for="email">Adresse email</label>
-                        <input type="email" id="email" name="email" placeholder="marie@entreprise.com" required autocomplete="email">
+                        <input type="email" id="email" name="email" placeholder="frank@entreprise.com" required autocomplete="email">
                     </div>
                     <div class="form-group">
                         <label for="sujet">Sujet</label>
