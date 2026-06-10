@@ -1,13 +1,37 @@
-# Windows metadata
+# Windows
 *.Zone.Identifier
 Thumbs.db
 desktop.ini
 
 # macOS
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Éditeurs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
 
 # Node (si build tools ajoutés plus tard)
 node_modules/
+package-lock.json
 dist/
+build/
+
+# Variables d'environnement
 .env
 .env.*
+.env.local
+
+# Logs
+*.log
+
+# CV — ne pas versionner le PDF dans le dépôt public
+cv.pdf
+CV*.pdf
+resume*.pdf
