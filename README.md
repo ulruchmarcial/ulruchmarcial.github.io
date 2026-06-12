@@ -18,7 +18,7 @@ Portfolio 100 % statique (HTML · CSS · JavaScript vanilla) sans dépendance ex
 | 02 | Formation | Timeline UQTR · Bamenda · Douala |
 | 03 | Compétences | 9 domaines avec barres de niveau animées |
 | 04 | Projets | 12 projets académiques UQTR avec filtres par catégorie |
-| 05 | Expérience | Bourse BCRP/CRSNG · DAK Services · Transval |
+| 05 | Expérience | Bourse BRPC/CRSNG · DAK Services · Transval |
 | 06 | Contact | Formulaire Formsubmit + liens directs |
 
 ## Stack technique

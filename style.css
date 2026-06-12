@@ -863,7 +863,7 @@ body.light-mode .skill-bar { background: rgba(0, 0, 0, 0.08); }
 }
 
 /* ============================================================
-   CARTE DE RECHERCHE — Style spécial pour la bourse BCRP
+   CARTE DE RECHERCHE — Style spécial pour la bourse BRPC
    Distinct des autres expériences pour la mettre en valeur
    ============================================================ */
 .research-card {
@@ -886,7 +886,7 @@ body.light-mode .skill-bar { background: rgba(0, 0, 0, 0.08); }
     border-radius: var(--radius) var(--radius) 0 0;
 }
 
-/* Badge "Bourse BCRP" en haut de la carte */
+/* Badge "Bourse BRPC" en haut de la carte */
 .research-badge-top {
     margin-bottom: 0.9rem;
 }

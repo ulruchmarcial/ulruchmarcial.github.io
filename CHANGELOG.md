@@ -25,7 +25,7 @@ Format basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.0.0/).
 - Timeline Formation (UQTR · Bamenda · Douala)
 - Section Compétences — 9 domaines avec barres de niveau animées
 - Section Projets — 12 projets UQTR avec filtres par catégorie
-- Section Expérience — Bourse BCRP/CRSNG + parcours professionnel
+- Section Expérience — Bourse BRPC/CRSNG + parcours professionnel
 - Section Contact avec formulaire Formsubmit fonctionnel
 - Mode sombre / clair persisté via localStorage
 - Navigation responsive avec menu hamburger
